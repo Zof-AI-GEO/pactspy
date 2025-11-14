@@ -12,6 +12,22 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: `PactSpy`,
   description: `Automate Your Software Testing using ZofAI`,
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://pactspy.com"
+  ),
+  openGraph: {
+    title: "PactSpy",
+    description: "Automate Your Software Testing using ZofAI",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://pactspy.com",
+    siteName: "PactSpy",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PactSpy",
+    description: "Automate Your Software Testing using ZofAI",
+  },
 };
 
 export default function RootLayout({
